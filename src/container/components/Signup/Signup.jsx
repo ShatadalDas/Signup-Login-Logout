@@ -6,23 +6,6 @@ import "./Signup.scss";
 import axios from "axios";
 const imgUrl = "https://bit.ly/3Asivp7";
 
-function checkFname(name) {
-  for (let i = 0; i < name.length; i++) {
-    if (
-      (name[i] >= "a" && name[i] <= "z") ||
-      (name[i] >= "A" && name[i] <= "Z") ||
-      (name[i] >= "0" && name[i] <= "9") ||
-      name[i] === "_" ||
-      name[i] === " "
-    ) {
-      continue;
-    } else {
-      return "* invalid character";
-    }
-  }
-}
-
-
 function Signup() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
