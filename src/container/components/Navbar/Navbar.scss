@@ -1,0 +1,52 @@
+.navbar {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: hsla(0, 0%, 100%, 0.6);
+  padding: 2vh 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    font-size: clamp(0.7rem, 2vw + 0.3rem, 1.3rem);
+    gap: 0.5em;
+    color: #fff;
+    &__logo {
+      height: clamp(2rem, 5vw + 0.1rem, 2.5rem);
+      filter: drop-shadow(0 0 2px #fff7);
+    }
+    &__title {
+      font-family: "Lato", sans-serif;
+    }
+  }
+
+  &__right {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    font-size: clamp(0.7rem, 2vw + 0.3rem, 1.2rem);
+    gap: 1.5em;
+    * {
+      cursor: pointer;
+    }
+
+    &__logout{
+      color: hsl(0, 100%, 70%);
+    }
+  }
+}
+
+.active {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: hsl(180, 100%, 50%);
+  }
+}

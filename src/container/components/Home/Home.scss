@@ -1,0 +1,23 @@
+.home{
+    min-height: 100vh;
+    max-width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1rem, 3vw + .1rem, 2rem);
+    position: relative;
+    z-index: -1;
+    isolation: isolate;
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: #0005;
+    }
+}
