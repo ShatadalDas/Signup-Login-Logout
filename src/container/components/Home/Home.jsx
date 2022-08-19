@@ -7,9 +7,12 @@ function Home() {
   const name = useSelector((state) => state.userName.value);
 
   return (
-    <div className="home" style={{ backgroundImage: `url(${url})` }}>
-      <h1>Hello{name ? ", " + name + "!" : "!"}</h1>
-    </div>
+    <>
+      <title>Home</title>
+      <div className="home" style={{ backgroundImage: `url(${url})` }}>
+        <h1>Hello{name ? ", " + name + "!" : "!"}</h1>
+      </div>
+    </>
   );
 }
 

@@ -46,53 +46,56 @@ export default function Login() {
   }
 
   return (
-    <div className="login" style={{ backgroundImage: `url(${imgUrl})` }}>
-      <form onSubmit={handleSubmit} className="login__box">
-        <section className="login__box__email">
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            onKeyPress={(e) => {
-              if (
-                !/[0-9]/.test(e.key) &&
-                !/[a-z]/.test(e.key) &&
-                e.key !== "@" &&
-                e.key !== "."
-              ) {
-                e.preventDefault();
-              }
-            }}
-            onInput={(e) => {
-              setEmail(e.target.value);
-              if (emailAlert === "* email isn't signed up") {
-                setEmailAlert("");
-              }
-            }}
-          />
-          <small>{emailAlert}</small>
-        </section>
+    <>
+      <title>Login</title>
+      <div className="login" style={{ backgroundImage: `url(${imgUrl})` }}>
+        <form onSubmit={handleSubmit} className="login__box">
+          <section className="login__box__email">
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              onKeyPress={(e) => {
+                if (
+                  !/[0-9]/.test(e.key) &&
+                  !/[a-z]/.test(e.key) &&
+                  e.key !== "@" &&
+                  e.key !== "."
+                ) {
+                  e.preventDefault();
+                }
+              }}
+              onInput={(e) => {
+                setEmail(e.target.value);
+                if (emailAlert === "* email isn't signed up") {
+                  setEmailAlert("");
+                }
+              }}
+            />
+            <small>{emailAlert}</small>
+          </section>
 
-        <section className="login__box__password">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onInput={(e) => {
-              setPass(e.target.value);
-              setPassAlert("");
-            }}
-          />
-          <small>{passAlert}</small>
-        </section>
+          <section className="login__box__password">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onInput={(e) => {
+                setPass(e.target.value);
+                setPassAlert("");
+              }}
+            />
+            <small>{passAlert}</small>
+          </section>
 
-        <div className="login__box__btns">
-          <input type="reset" value="Reset" />
-          <button disabled={!allow}>Login</button>
-        </div>
-      </form>
-    </div>
+          <div className="login__box__btns">
+            <input type="reset" value="Reset" />
+            <button disabled={!allow}>Login</button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }

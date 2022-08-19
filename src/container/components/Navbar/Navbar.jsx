@@ -3,7 +3,7 @@ import "./Navbar.scss";
 import { logo } from "../../../assets";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { updateName } from "../../../slices/nameSlice.mjs";
+import { updateName } from "../../../redux/slices/nameSlice.mjs";
 
 function url(urlPos) {
   console.log(urlPos);
