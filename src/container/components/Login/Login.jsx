@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { updateName } from "../../../slices/nameSlice.mjs";
+import { updateName } from "../../../redux/slices/nameSlice.mjs";
 import { useDispatch } from "react-redux";
 
 export default function Login() {
